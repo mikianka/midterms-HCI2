@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<title>Kimi - My Projects</title>
+
+	<link rel="stylesheet" href= "style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+
+<style media="screen">
+
+body{
+	line-height: 1.5;
+	font-family: sans-serif;
+}
+*{
+	margin:0;
+	box-sizing: border-box;
+}
+.container{
+	max-width: 1400px;
+	margin:auto;
+}
+.row{
+	display: flex;
+	flex-wrap: wrap;
+}
+img{
+	max-width: 100%;
+	vertical-align: middle;
+}
+
+
+/*.gallery*/
+.gallery{
+	width: 100%;
+	display: block;
+	min-height: 110vh;
+	background-color: #4885DD;
+	padding: 100px 0;
+}
+.gallery .gallery-filter{
+	padding: 0 15px;
+	width: 100%;
+	text-align: center;
+	margin-bottom: 40px;
+}
+.gallery .gallery-filter .filter-item{
+	color: #ffffff;
+	font-size: 17px;
+  	border: 2px solid white;
+	text-transform: uppercase;
+	display: inline-block;
+  	border-radius: 20px;
+  	margin-right: 8px;
+	cursor: pointer;
+  	padding: 8px 20px 8px 20px;
+	line-height: 1.2;
+	transition: all 0.3s ease;
+}
+.gallery .gallery-filter .filter-item.active{
+	color: white;
+	border-color : #16b5ef;
+  	background: #16b5ef;
+}
+.gallery .gallery-item{
+	width: calc(100% / 3);
+	padding: 15px;
+
+}
+.gallery .gallery-item-inner img{
+	width: 100%;
+  	border: 3px solid #d4dad9;
+}
+.gallery .gallery-item.show{
+	animation: fadeIn 0.5s ease;
+}
+@keyframes fadeIn{
+	0%{
+		opacity: 0;
+	}
+	100%{
+		opacity: 1;
+	}
+}
+.gallery .gallery-item.hide{
+	display: none;
+}
+
+/*responsive*/
+@media(max-width: 491px){
+	.gallery .gallery-item{
+		width: 50%;
+	}
+}
+@media(max-width: 467px){
+    .gallery .gallery-item{
+		width: 100%;
+	}
+	.gallery .gallery-filter .filter-item{
+		margin-bottom: 10px;
+	}
+}
+
+  </style>
+</head>
+<body>
+
+<div class="scrollToTop-btn">
+	<i class="fas fa-angle-up"></i>
+</div>
+  
+	  <header>
+		<a href="index.html" class="brand">KIMI</a>
+		<div class="menu-btn"></div>
+		<div class="navigation">
+		  <a href="index.html#main">Home</a>
+		  <a href="index.html#about">About</a>
+		  <a href="index.html#skills">Skills</a>
+		  <a href="index.html#project">Project</a>
+		  <a href="index.html#contact">Contact</a>
+		</div>
+	  </header>
+
+<section class="gallery">
+	<div class="container">
+		<div class="row">
+			<div class="gallery-filter">
+				<span class="filter-item active" data-filter="all">My Projects</span>
+				<br><br>
+
+				<span class="filter-item" data-filter="store">NCT 127 Merchandise</span>
+				<span class="filter-item" data-filter="dictionary">Daily Dictionary</span>
+				<span class="filter-item" data-filter="brunch">Brunch Factory</span>
+        		<span class="filter-item" data-filter="note">Slam Note</span>
+				<span class="filter-item" data-filter="blog">Diurna De Christiana</span>
+				<span class="filter-item" data-filter="wix">TechBytes</span>
+			</div>
+		</div>
+		<div class="row">
+			
+			<div class="gallery-item store">
+				<div class="gallery-item-inner">
+					<img src="images/store/store1.png" alt="store">
+				</div>
+			</div>
+			
+			<!-- store 2nd pic -->
+			<div class="gallery-item store">
+				<div class="gallery-item-inner">
+					<img src="images/store/store2.png" alt="store">
+				</div>
+			</div>
+
+			<!-- store 3rd pic -->
+			<div class="gallery-item store">
+				<div class="gallery-item-inner">
+					<img src="images/store/store5.png" alt="store2">
+				</div>
+			</div>
+
+			<!-- store 4th pic -->
+			<div class="gallery-item store">
+				<div class="gallery-item-inner">
+					<img src="images/store/store3.png" alt="store2">
+				</div>
+			</div>
+
+			<!-- dictionary 5th pic -->
+			<div class="gallery-item dictionary">
+				<div class="gallery-item-inner">
+					<img src="images/dictionary/dictionary1.png" alt="dictionary">
+				</div>
+			</div>
+
+			<!-- store 6th pic -->
+			<div class="gallery-item store">
+				<div class="gallery-item-inner">
+					<img src="images/store/store4.png" alt="store2">
+				</div>
+			</div>
+
+			<!-- dictionary 7th pic -->
+			<div class="gallery-item dictionary">
+				<div class="gallery-item-inner">
+					<img src="images/dictionary/dictionary2.png" alt="dictionary2">
+				</div>
+			</div>
+			
+			<!-- brunch 8th pic -->
+			<div class="gallery-item brunch">
+				<div class="gallery-item-inner">
+					<img src="images/work3.png" alt="brunch-factory-home-page">
+				</div>
+			</div>
+			
+			<!-- dictionary 9th pic -->
+			<div class="gallery-item dictionary">
+				<div class="gallery-item-inner">
+					<img src="images/dictionary/dictionary3.png" alt="dictionary-3">
+				</div>
+			</div>
+
+			<!-- brunch 10th pic -->
+			<div class="gallery-item brunch">
+				<div class="gallery-item-inner">
+					<img src="images/brunch/menu_1.png" alt="brunch-factory-menu-brunch">
+				</div>
+			</div>	
+			
+			<!-- slam note home page 11th pic-->
+			<div class="gallery-item note">
+				<div class="gallery-item-inner">
+					<img src="images/work4.png" alt="slam-note-home-page">
+				</div>
+			</div>
+
+			<!-- brunch -->
+			<div class="gallery-item brunch">
+				<div class="gallery-item-inner">
+					<img src="images/brunch/menu_2.png" alt="brunch">
+				</div>
+			</div>
+	
+			<!-- brunch -->
+			<div class="gallery-item brunch">
+				<div class="gallery-item-inner">
+					<img src="images/brunch/menu_3.png" alt="brunch-factory-menu">
+				</div>
+			</div>
+
+			
+			<div class="gallery-item note">
+				<div class="gallery-item-inner">
+					<img src="images/note/note2.png" alt="slam-note-about-me">
+				</div>
+			</div>			
+
+			<!-- brunch -->
+			<div class="gallery-item brunch">
+				<div class="gallery-item-inner">
+					<img src="images/brunch/menu_4.png" alt="brunch-factory-menu">
+				</div>
+			</div>
+
+			<!-- brunch -->
+			<div class="gallery-item brunch">
+				<div class="gallery-item-inner">
+					<img src="images/brunch/vmv.png" alt="brunch-factory-vision-mission-values">
+				</div>
+			</div>
+			<!-- brunch -->
+
+			<div class="gallery-item note">
+				<div class="gallery-item-inner">
+					<img src="images/note/note3.png" alt="note-favorites">
+				</div>
+			</div>
+
+			<div class="gallery-item brunch">
+				<div class="gallery-item-inner">
+					<img src="images/brunch/services.png" alt="brunch-factory-services">
+				</div>
+			</div>
+
+			<div class="gallery-item brunch">
+				<div class="gallery-item-inner">
+					<img src="images/brunch/form.png" alt="brunch-factory-form">
+				</div>
+			</div>
+
+			<div class="gallery-item note">
+				<div class="gallery-item-inner">
+					<img src="images/note/note4.png" alt="note-favorites-2">
+				</div>
+			</div>
+
+			<div class="gallery-item brunch">
+				<div class="gallery-item-inner">
+					<img src="images/brunch/about_us.png" alt="brunch-factory-about-us">
+				</div>
+			</div>
+
+			<div class="gallery-item brunch">
+				<div class="gallery-item-inner">
+					<img src="images/brunch/reservation.png" alt="brunch-factory-reservation">
+				</div>
+			</div>
+
+			<div class="gallery-item note">
+				<div class="gallery-item-inner">
+					<img src="images/note/note5.png" alt="slam-note-personal">
+				</div>
+			</div>
+
+			<div class="gallery-item brunch">
+				<div class="gallery-item-inner">
+					<img src="images/brunch/contact.png" alt="brunch-factory-contact-us">
+				</div>
+			</div>
+
+			<div class="gallery-item blog">
+				<div class="gallery-item-inner">
+					<img src="images/blog/blog1.png" alt="wix">
+				</div>
+			</div>
+
+			<div class="gallery-item note">
+				<div class="gallery-item-inner">
+					<img src="images/note/note6.png" alt="slam-note-opinions">
+				</div>
+			</div>
+
+			<div class="gallery-item blog">
+				<div class="gallery-item-inner">
+					<img src="images/blog/blog2.png" alt="wix-blog-2">
+				</div>
+			</div>
+
+			<div class="gallery-item blog">
+				<div class="gallery-item-inner">
+					<img src="images/blog/blog3.png" alt="wix-blog-3">
+				</div>
+			</div>
+
+			<div class="gallery-item blog">
+				<div class="gallery-item-inner">
+					<img src="images/blog/blog4.png" alt="wix-blog-4">
+				</div>
+			</div>
+
+			<div class="gallery-item blog">
+				<div class="gallery-item-inner">
+					<img src="images/blog/blog5.png" alt="wix-blog-5">
+				</div>
+			</div>
+
+			<div class="gallery-item blog">
+				<div class="gallery-item-inner">
+					<img src="images/blog/blog6.png" alt="wix-blog-6">
+				</div>
+			</div>
+
+			<div class="gallery-item wix">
+				<div class="gallery-item-inner">
+					<img src="images/wix/wix1.png" alt="wix-home-page">
+				</div>
+			</div>
+
+			<div class="gallery-item blog">
+				<div class="gallery-item-inner">
+					<img src="images/blog/blog7.png" alt="wix-blog-7">
+				</div>
+			</div>
+
+			<div class="gallery-item wix">
+				<div class="gallery-item-inner">
+					<img src="images/wix/wix4.png" alt="wix-IT-topics-2">
+				</div>
+			</div>
+			
+			<div class="gallery-item wix">
+				<div class="gallery-item-inner">
+					<img src="images/wix/wix5.png" alt="wix-IT-topics-1">
+				</div>
+			</div>
+
+			<div class="gallery-item wix">
+				<div class="gallery-item-inner">
+					<img src="images/wix/wix7.png" alt="wix-portfolio">
+				</div>
+			</div>
+
+			<div class="gallery-item wix">
+				<div class="gallery-item-inner">
+					<img src="images/wix/wix13.png" alt="wix-mail-merge">
+				</div>
+			</div>
+
+			<div class="gallery-item wix">
+				<div class="gallery-item-inner">
+					<img src="images/wix/wix8.png" alt="wix-camera-shots">
+				</div>
+			</div>
+
+			<div class="gallery-item wix">
+				<div class="gallery-item-inner">
+					<img src="images/wix/wix9.png" alt="wix-camera-angles">
+				</div>
+			</div>
+
+			<div class="gallery-item wix">
+				<div class="gallery-item-inner">
+					<img src="images/wix/wix10.png" alt="wix-about-me">
+				</div>
+			</div>
+
+			<div class="gallery-item wix">
+				<div class="gallery-item-inner">
+					<img src="images/wix/wix11.png" alt="wix-about-techbytes">
+				</div>
+			</div>
+
+			<div class="gallery-item wix">
+				<div class="gallery-item-inner">
+					<img src="images/wix/wix12.png" alt="wix-contact">
+				</div>
+			</div>
+			
+		</div>
+	</div>
+</section>
+
+<script>
+
+
+ const filterContainer = document.querySelector(".gallery-filter"),
+ galleryItems = document.querySelectorAll(".gallery-item");
+
+ filterContainer.addEventListener("click", (event) =>{
+   if(event.target.classList.contains("filter-item")){
+   	 // deactivate existing active 'filter-item'
+   	 filterContainer.querySelector(".active").classList.remove("active");
+   	 // activate new 'filter-item'
+   	 event.target.classList.add("active");
+   	 const filterValue = event.target.getAttribute("data-filter");
+   	 galleryItems.forEach((item) =>{
+       if(item.classList.contains(filterValue) || filterValue === 'all'){
+       	item.classList.remove("hide");
+       	 item.classList.add("show");
+       }
+       else{
+       	item.classList.remove("show");
+       	item.classList.add("hide");
+       }
+   	 });
+   }
+ });
+</script>
+</body>
+</html>
